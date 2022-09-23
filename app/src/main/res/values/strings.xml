@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">Pt2_Lopez_Oscar</string>
+    <string name="Temperatura">Temperatura</string>
+    <string name="Longitud">Longitud</string>
+    <string name="Pes">Pes</string>
+    <string name="Kelvin" translatable="false">Kelvin</string>
+    <string name="Celcius" translatable="false">Celcius</string>
+    <string name="Farenheit" translatable="false">Farenheit</string>
+    <string name="Rankine" translatable="false">Rankine</string>
+</resources>

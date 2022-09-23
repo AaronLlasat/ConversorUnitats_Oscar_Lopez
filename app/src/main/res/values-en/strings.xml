@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pt2_Lopez_Oscar</string>
+    <string name="Temperatura">Temperature</string>
+    <string name="Longitud">lenght</string>
+    <string name="Pes">Weight</string>
+</resources>
