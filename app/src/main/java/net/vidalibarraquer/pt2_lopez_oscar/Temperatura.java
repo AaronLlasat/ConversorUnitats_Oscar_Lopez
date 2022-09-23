@@ -64,43 +64,40 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-
-
-        double temp = Double.parseDouble(editTemp.getText().toString());
-
         try {
+            double t = Double.parseDouble(editTemp.getText().toString());
             boolean checked = ((RadioButton) view).isChecked();
             switch (view.getId()) {
                 case R.id.rb_kelvin:
                     if (checked)
 
-                    tvResultCelsius.setText(KelvinToCesius(temp)+ " Celsius");
-                    tvResultKelvin.setText( temp + "Kelvin");
-                    tvResultFarenheit.setText(KelvinToFareheit(temp)+" Fareheit");
-                    tvResultRankine.setText(KelvinToRankine(temp)+" Rankine");
+                    tvResultCelsius.setText((KelvinToCesius(t))+ " Celsius");
+                    tvResultKelvin.setText( t + "Kelvin");
+                    tvResultFarenheit.setText(KelvinToFareheit(t)+" Fareheit");
+                    tvResultRankine.setText(KelvinToRankine(t)+" Rankine");
                     break;
 
                 case R.id.rb_Celsius:
                     if (checked)
-                        tvResultKelvin.setText("Kelvin");
-                    tvResultCelsius.setText("Celsius");
-                    tvResultFarenheit.setText("Fareheit");
-                    tvResultRankine.setText("Rankine");
+                        tvResultKelvin.setText(CelsiustoKelvin(t)+" Kelvin");
+                    tvResultCelsius.setText(t+ " Celsius");
+                    tvResultFarenheit.setText(CelsiustoFarenheit(t)+" Fareheit");
+                    tvResultRankine.setText(CelsiustoRankine(t)+" Rankine");
                     break;
 
                 case R.id.rb_Farenheit:
                     if (checked)
-                        tvResultKelvin.setText("Kelvin");
-                    tvResultCelsius.setText("Celsius");
-                    tvResultFarenheit.setText("Fareheit");
-                    tvResultRankine.setText("Rankine");
+                        tvResultKelvin.setText(FarenheitToKelvin(t)+" Kelvin");
+                    tvResultCelsius.setText(FarenheitToCelcius(t)+" Celsius");
+                    tvResultFarenheit.setText(t + "Fareheit");
+                    tvResultRankine.setText(FarenheitToRankine(t) +" Rankine");
                     break;
                 case R.id.rb_Rankine:
                     if (checked)
-                        tvResultKelvin.setText("Kelvin");
-                    tvResultCelsius.setText("Celsius");
-                    tvResultFarenheit.setText("Fareheit");
-                    tvResultRankine.setText("Rankine");
+                        tvResultKelvin.setText(t +" Kelvin");
+                    tvResultCelsius.setText(RankinetoCesius(t)+" Celsius");
+                    tvResultFarenheit.setText(RankinetoFareheit(t) +"Fareheit");
+                    tvResultRankine.setText(RankinetoKelvin(t)+" Rankine");
                     break;
 
                 default:
@@ -111,23 +108,54 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-
-    public double KelvinToCesius(double temp){
-        DecimalFormat df = new DecimalFormat("#.0");
-
-        double c = temp - 273.15;
-        return c;
+//kelvin to..
+    public double KelvinToCesius(double t){
+        return t - 273.15;
     }
-    public double KelvinToFareheit(double temp){
-        double f  = (temp - 273.15) * 9/5 + 32;
-
-        return f;
+    public double KelvinToFareheit(double t){
+        return (t - 273.15) * 9/5 + 32;
 
     }
-    public double KelvinToRankine(double temp){
-        double r = temp - 273.15;
-        return r;
+    public double KelvinToRankine(double t){
+        return t - 273.15;
 
     }
 
+   //Rankine to...
+
+    public double RankinetoKelvin(double t){
+        return t /1.8;
+    }
+    public double RankinetoFareheit(double t){
+        return t -459.67;
+    }
+    public double RankinetoCesius(double t){
+        return (t - 491.37) /1.8;
+    }
+
+//farenheit to..
+
+    public double FarenheitToKelvin(double t){
+        return (t -32)/1.8 +273.15;
+    }
+    public double FarenheitToRankine(double t){
+        return t +459.67;
+    }
+    public double FarenheitToCelcius(double t){
+        return (t -32)*1.8;
+    }
+    //celsius to..
+
+    public double CelsiustoKelvin(double t){
+        return t +273.15;
+
+    }
+    public double CelsiustoRankine(double t){
+        return (t +273.15)*1.8;
+
+    }
+    public double CelsiustoFarenheit(double t){
+        return (t *1.8) + 32;
+
+    }
 }
