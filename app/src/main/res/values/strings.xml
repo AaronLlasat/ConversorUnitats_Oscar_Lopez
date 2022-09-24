@@ -7,4 +7,5 @@
     <string name="Celcius" translatable="false">Celcius</string>
     <string name="Farenheit" translatable="false">Farenheit</string>
     <string name="Rankine" translatable="false">Rankine</string>
+    <string name="ConversorUnitats">Conversor Unitats</string>
 </resources>

@@ -4,4 +4,5 @@
     <string name="Temperatura">Temperature</string>
     <string name="Longitud">lenght</string>
     <string name="Pes">Weight</string>
+    <string name="ConversorUnitats">Unit Converter</string>
 </resources>

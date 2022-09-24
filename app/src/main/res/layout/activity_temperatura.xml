@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Temperatura">
 
-
     <TextView
         android:id="@+id/tvResultCelsius"
         android:layout_width="271dp"
@@ -27,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.713" />
 
     <TextView
         android:id="@+id/tvResultFarenheit"
@@ -38,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.634" />
 
     <TextView
         android:id="@+id/tvResultKelvin"
@@ -49,19 +48,7 @@
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
-
-    <TextView
-        android:id="@+id/tv_temp_titol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Temperatura"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.551" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -79,31 +66,38 @@
             android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="@string/Kelvin" />
+            android:text="@string/Kelvin" android:textColor="#673ab7"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb_Rankine"
             android:layout_width="164dp"
             android:layout_height="wrap_content"
             android:minHeight="50dp"
-            android:text="@string/Rankine" />
+            android:text="@string/Rankine"
+        android:textColor="#673ab7"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb_Farenheit"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
-            android:text="@string/Farenheit" />
-
+            android:text="@string/Farenheit" android:textColor="#673ab7"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <RadioButton
             android:id="@+id/rb_Celsius"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
-            android:text="@string/Celcius" />
-
+            android:text="@string/Celcius" android:textColor="#673ab7"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTemp"
+        android:id="@+id/et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -115,6 +109,19 @@
         app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.076"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        app:icon="?attr/homeAsUpIndicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

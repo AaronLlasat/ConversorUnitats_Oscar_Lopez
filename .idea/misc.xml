@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_temperatura.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_longitud.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_pes.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/oscar/AndroidStudioProjects/Pt2_Lopez_Oscar/app/src/main/res/layout/activity_temperatura.xml" value="0.4" />
       </map>
     </option>
   </component>

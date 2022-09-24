@@ -8,20 +8,23 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/ConversorUnitats"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pt2_Lopez_Oscar"
         tools:targetApi="31">
         <activity
             android:name=".Pes"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/Pes"/>
         <activity
             android:name=".Longitud"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/Longitud"/>
         <activity
             android:name=".Temperatura"
-            android:label="Temperatura" />
+            android:exported="false"
+            android:label="@string/Temperatura" />
 
         <activity
             android:name=".MainActivity"

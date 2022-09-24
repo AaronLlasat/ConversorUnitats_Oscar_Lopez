@@ -1,6 +1,6 @@
 package net.vidalibarraquer.pt2_lopez_oscar;
 
-import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -34,19 +34,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        try {
+
         switch (view.getId()) {
-
-
             case R.id.btn_Temperatura:
                 startActivity(new Intent(this, Temperatura.class));
                 break;
             case R.id.btn_Longitud:
                 startActivity(new Intent(this, Longitud.class));
-
+                break;
             case R.id.btn_Pes:
                 startActivity(new Intent(this, Pes.class));
                 break;
+            default:
+                break;
+        }
+        }catch(Exception e){
 
+            }
 
 
 
@@ -54,4 +59,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-}
