@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pt2_Lopez_Oscar"
+        android:background="@color/grey"
         tools:targetApi="31">
+
         <activity
             android:name=".Pes"
             android:exported="false"

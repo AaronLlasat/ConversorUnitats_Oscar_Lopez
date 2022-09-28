@@ -2,7 +2,6 @@ package net.vidalibarraquer.pt2_lopez_oscar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +25,11 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
     TextView tvResultFarenheit;
     TextView tvResultRankine;
 
+    TextView tvKelvin;
+    TextView tvCelsius;
+    TextView tvFarenheit;
+    TextView tvRankine;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,18 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
 
         btn_home = findViewById(R.id.btn_home);
         btn_home.setOnClickListener(this);
+
+        tvKelvin = findViewById(R.id.tvPulgada);
+        tvKelvin.setOnClickListener(this);
+
+        tvCelsius = findViewById(R.id.tvKm);
+        tvCelsius.setOnClickListener(this);
+
+        tvFarenheit = findViewById(R.id.tvYarda);
+        tvFarenheit.setOnClickListener(this);
+
+        tvRankine = findViewById(R.id.tvMilla);
+        tvRankine.setOnClickListener(this);
 
         rb_kelvin = findViewById(R.id.rb_kelvin);
         rb_kelvin.setOnClickListener(this);
@@ -66,56 +82,62 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        double t = Double.parseDouble(et.getText().toString());
-        boolean checked = ((RadioButton) view).isChecked();
+
+
         try {
+            if (view.getId() == R.id.btn_home){
+                startActivity(new Intent(this, MainActivity.class));
 
-            switch (view.getId()) {
-                case R.id.rb_kelvin:
-                    if (checked)
+            }else {
 
-                        tvResultCelsius.setText("Celsius  " + (KelvinToCesius(t)) + "º");
-                    tvResultKelvin.setText("Kelvin  " + t + "º");
-                    tvResultFarenheit.setText("Fareheit  " + KelvinToFareheit(t) + "º");
-                    tvResultRankine.setText("Rankine  " + KelvinToRankine(t) + "º");
-                    break;
 
-                case R.id.rb_Celsius:
-                    if (checked)
-                        tvResultKelvin.setText("Kelvin  " + CelsiustoKelvin(t) + "º");
-                    tvResultCelsius.setText("Celsius  " + t + "º");
-                    tvResultFarenheit.setText("Fareheit  " + CelsiustoFarenheit(t) + "º");
-                    tvResultRankine.setText("Rankine  " + CelsiustoRankine(t) + "º");
-                    break;
+                double t = Double.parseDouble(et.getText().toString());
+                boolean checked = ((RadioButton) view).isChecked();
+                switch (view.getId()) {
+                    case R.id.rb_kelvin:
+                        if (checked)
+                            publicar();
+                            tvResultCelsius.setText( (KelvinToCesius(t)) + "º");
+                        tvResultKelvin.setText( t + "º");
+                        tvResultFarenheit.setText(  KelvinToFareheit(t) + "º");
+                        tvResultRankine.setText( KelvinToRankine(t) + "º");
+                        break;
 
-                case R.id.rb_Farenheit:
-                    if (checked)
-                        tvResultKelvin.setText("Kelvin  " + FarenheitToKelvin(t) + "º");
-                    tvResultCelsius.setText("Celsius  " + FarenheitToCelcius(t) + "º");
-                    tvResultFarenheit.setText("Fareheit  " + t + "º");
-                    tvResultRankine.setText("Rankine  " + FarenheitToRankine(t) + "º");
-                    break;
-                case R.id.rb_Rankine:
-                    if (checked)
-                        tvResultKelvin.setText("Kelvin  " + t + "º");
-                    tvResultCelsius.setText("Celsius  " + RankinetoCesius(t) + "º");
-                    tvResultFarenheit.setText("Fareheit  " + RankinetoFareheit(t) + "º");
-                    tvResultRankine.setText("Rankine  " + RankinetoKelvin(t) + "º");
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + view.getId());
+                    case R.id.rb_Celsius:
+                        if (checked)
+                            publicar();
+                            tvResultKelvin.setText( CelsiustoKelvin(t) + "º");
+                        tvResultCelsius.setText( t + "º");
+                        tvResultFarenheit.setText( CelsiustoFarenheit(t) + "º");
+                        tvResultRankine.setText( CelsiustoRankine(t) + "º");
+                        break;
+
+                    case R.id.rb_Farenheit:
+                        if (checked)
+                            publicar();
+                            tvResultKelvin.setText( FarenheitToKelvin(t) + "º");
+                        tvResultCelsius.setText( FarenheitToCelcius(t) + "º");
+                        tvResultFarenheit.setText(t + "º");
+                        tvResultRankine.setText( FarenheitToRankine(t) + "º");
+                        break;
+                    case R.id.rb_Rankine:
+                        if (checked)
+                            publicar();
+                            tvResultKelvin.setText( t + "º");
+                        tvResultCelsius.setText(RankinetoCesius(t) + "º");
+                        tvResultFarenheit.setText( RankinetoFareheit(t) + "º");
+                        tvResultRankine.setText( RankinetoKelvin(t) + "º");
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + view.getId());
+                }
+
             }
 
         } catch (Exception e) {
+            e.getLocalizedMessage();
 
         }
-
-        switch (view.getId()) {
-            case R.id.btn_home:
-                startActivity(new Intent(this, MainActivity.class));
-        }
-
-
     }
 
 
@@ -178,11 +200,18 @@ public class Temperatura extends AppCompatActivity implements View.OnClickListen
         double f= (t *1.8) + 32;
         return format(f);
     }
-
+//format decimal
     public String format(double t){
         DecimalFormat decimalFormat = new DecimalFormat("#####.##");
         return decimalFormat.format(t);
 
+    }
+
+    public void publicar(){
+        tvCelsius.setText("Celsius  " );
+        tvKelvin.setText("Kelvin");
+        tvFarenheit.setText("Farenheit");
+        tvRankine.setText("Rankine");
     }
 
 }

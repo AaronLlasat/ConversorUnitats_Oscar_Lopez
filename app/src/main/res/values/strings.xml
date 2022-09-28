@@ -8,4 +8,14 @@
     <string name="Farenheit" translatable="false">Farenheit</string>
     <string name="Rankine" translatable="false">Rankine</string>
     <string name="ConversorUnitats">Conversor Unitats</string>
+    <string name="km">Quilòmetre</string>
+    <string name="mi">Milla</string>
+    <string name="Yd">Larda</string>
+    <string name="Polzada">Polzada</string>
+    <string name="Kg">Quilogram</string>
+    <string name="Lb">Lliura</string>
+    <string name="Oz">Unça</string>
+    <string name="Stone" translatable="false">Stone</string>
+
+
 </resources>

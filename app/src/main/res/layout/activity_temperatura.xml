@@ -7,48 +7,120 @@
     tools:context=".Temperatura">
 
     <TextView
+        android:id="@+id/tvKm"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#494343"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <TextView
+        android:id="@+id/tvYarda"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#494343"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
+
+    <TextView
+        android:id="@+id/tvPulgada"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#494343"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532" />
+
+    <TextView
+        android:id="@+id/tvMilla"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#494343"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
         android:id="@+id/tvResultCelsius"
-        android:layout_width="271dp"
-        android:layout_height="37dp"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#590F0F"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
-
-    <TextView
-        android:id="@+id/tvResultRankine"
-        android:layout_width="271dp"
-        android:layout_height="37dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
-
-    <TextView
-        android:id="@+id/tvResultFarenheit"
-        android:layout_width="271dp"
-        android:layout_height="37dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.47" />
 
     <TextView
         android:id="@+id/tvResultKelvin"
-        android:layout_width="271dp"
-        android:layout_height="37dp"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#590F0F"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.532" />
+
+    <TextView
+        android:id="@+id/tvResultFarenheit"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#590F0F"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
+
+    <TextView
+        android:id="@+id/tvResultRankine"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#590F0F"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -56,42 +128,46 @@
         android:layout_height="202dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206">
+        app:layout_constraintVertical_bias="0.213">
 
         <RadioButton
             android:id="@+id/rb_kelvin"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="@string/Kelvin" android:textColor="#673ab7"
+            android:text="@string/Kelvin"
+            android:textColor="#3F51B5"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb_Rankine"
-            android:layout_width="164dp"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:minHeight="50dp"
             android:text="@string/Rankine"
-        android:textColor="#673ab7"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            android:textColor="#3F51B5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb_Farenheit"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
-            android:text="@string/Farenheit" android:textColor="#673ab7"
+            android:text="@string/Farenheit"
+            android:textColor="#3F51B5"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <RadioButton
             android:id="@+id/rb_Celsius"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
-            android:text="@string/Celcius" android:textColor="#673ab7"
+            android:text="@string/Celcius"
+            android:textColor="#3F51B5"
             android:textSize="20sp"
             android:textStyle="bold" />
     </RadioGroup>
@@ -100,28 +176,29 @@
         android:id="@+id/et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/Temperatura"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <Button
         android:id="@+id/btn_home"
         android:layout_width="54dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         app:icon="?attr/homeAsUpIndicator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

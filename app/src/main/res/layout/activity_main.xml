@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btn_Pes"
-        android:layout_width="162dp"
+        android:layout_width="190dp"
         android:layout_height="53dp"
         android:text="@string/Pes"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/btn_Longitud"
-        android:layout_width="162dp"
+        android:layout_width="190dp"
         android:layout_height="53dp"
         android:text="@string/Longitud"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,7 @@
 
     <Button
         android:id="@+id/btn_Temperatura"
-        android:layout_width="162dp"
+        android:layout_width="190dp"
         android:layout_height="53dp"
         android:text="@string/Temperatura"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Pt2_Lopez_Oscar</string>
     <string name="Temperatura">Temperatura</string>
     <string name="Longitud">Longitud</string>
     <string name="Pes">Peso</string>
     <string name="ConversorUnitats">Conversor de unidades</string>
+    <string name="km">Kilómetro</string>
+    <string name="mi">Milla</string>
+    <string name="Yd">Yarda</string>
+    <string name="Polzada">Pulgada</string>
+    <string name="Kg">Kilogramo</string>
+    <string name="Lb">Libra</string>
+    <string name="Oz">Onza</string>
 </resources>
