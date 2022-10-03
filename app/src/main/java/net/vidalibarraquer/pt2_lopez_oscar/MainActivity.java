@@ -10,7 +10,7 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    // hola
     Button btn_Temperatura;
     Button btn_Longitud;
     Button btn_Pes;
